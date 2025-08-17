@@ -1,15 +1,11 @@
 #!/usr/bin/env bash
 # This script displays "To infinity and beyond" indefinitely
 # When it receives SIGTERM, it displays "I am invincible!!!" and continues running
-# Uses a method that properly handles signals during sleep
 
-# Set up signal trap for SIGTERM
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'echo "I am invincible!!!"' TERM
 
-# Infinite loop
 while true
 do
     echo "To infinity and beyond"
-    sleep 2 &
-    wait $!
+    sleep 2
 done
