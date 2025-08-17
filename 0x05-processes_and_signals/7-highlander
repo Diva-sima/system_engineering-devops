@@ -4,7 +4,7 @@
 # Demonstrates signal trapping and handling in bash
 
 # Set up signal trap for SIGTERM (signal 15)
-trap 'echo "I am invincible!!!"' 15
+trap "echo 'I am invincible!!!'" SIGTERM
 
 # Infinite loop
 while true
