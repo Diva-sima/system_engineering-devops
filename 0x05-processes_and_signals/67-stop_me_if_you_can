@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script stops the 7-highlander process
+# Modified version of 6-stop_me_if_you_can to target 7-highlander instead
+
+pkill -f "7-highlander"
